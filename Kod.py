@@ -109,9 +109,6 @@ class GameManager:
 		self.ball_group = ball_group
 		self.paddle_group = paddle_group
 
-
-		#self.run = False
-
 	def run_game(self):
 		self.paddle_group.draw(screen)
 		self.ball_group.draw(screen)
@@ -128,17 +125,6 @@ class GameManager:
 		if self.ball_group.sprite.rect.left <= 0:
 			self.player_score += 1
 			self.ball_group.sprite.reset_ball()
-
-        #if self.opponent_score == 10 or self.player_score == 10:
-		#	img = image.load('finger.png')
-		    
-            #self.run = True
-
-		#while run:
-         #   for e in event.get():
-          #      if e.type == QUIT:
-			#		if self.opponent_score == 3:
-             #           self.run = False 
 
 
 	def draw_score(self):
